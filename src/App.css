@@ -92,10 +92,12 @@
 .details {
   position: absolute;
   box-sizing: border-box;
-  left: 150px;
+  
   margin: 10px;
-  top: 86px;
+  
   margin-left: 140px;
+  left: 388px;
+    top: 162px;
 }
 
 .divDetail {

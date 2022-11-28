@@ -21,7 +21,7 @@ const Home = () => {
 
     return (
         <div>
-            <h1>Componente Home</h1>
+            
 
             <InputGroup className="mb-3">
                 <Form.Control

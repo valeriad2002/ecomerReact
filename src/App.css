@@ -1,4 +1,4 @@
-.loading{
+.loading {
 
   position: fixed;
   top: 0;
@@ -10,12 +10,18 @@
   align-items: center;
 }
 
+.imgProHome {
+  width: 110px;
+  margin: 10px 3.5rem;
+}
+
 .lds-facebook {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
+
 .lds-facebook div {
   display: inline-block;
   position: absolute;
@@ -24,25 +30,86 @@
   background: #fff;
   animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
+
 .lds-facebook div:nth-child(1) {
   left: 8px;
   animation-delay: -0.24s;
 }
+
 .lds-facebook div:nth-child(2) {
   left: 32px;
   animation-delay: -0.12s;
 }
+
 .lds-facebook div:nth-child(3) {
   left: 56px;
   animation-delay: 0;
 }
+
 @keyframes lds-facebook {
   0% {
     top: 8px;
     height: 64px;
   }
-  50%, 100% {
+
+  50%,
+  100% {
     top: 24px;
     height: 32px;
   }
+}
+
+.cards {
+  box-sizing: border-box;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.CARD1 {
+
+  padding: 10px;
+  margin: 1rem;
+  list-style: none;
+  border: 10px;
+  background-color: rgb(246, 239, 230);
+  width: auto;
+  height: auto;
+
+}
+
+.shop {
+  border-bottom: 0ch;
+}
+
+.text {
+  margin-top: 5rem;
+  text-decoration: none;
+  color: black;
+
+}
+
+.details {
+  position: absolute;
+  box-sizing: border-box;
+  left: 150px;
+  margin: 10px;
+  top: 86px;
+  margin-left: 140px;
+}
+
+.divDetail {
+  box-sizing: border-box;
+  margin: auto;
+  margin: 1rem;
+  margin-bottom: 193px;
+
+}
+
+.imgDetail {
+
+  top: 40px;
+  left: 22px;
+  width: 25%;
+  position: relative;
 }

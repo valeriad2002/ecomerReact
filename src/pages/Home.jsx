@@ -43,7 +43,7 @@ const Home = () => {
             {
                 category.map(categoryLust => (
 
-                    <Button key={categoryLust.name} onClick={() => dispatch(filterproductThunk(category.id))}>
+                    <Button key={categoryLust.name} onClick={() => dispatch(filterproductThunk(categoryLust.id))}>
                         {categoryLust.name}
                     </Button>
                 ))

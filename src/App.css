@@ -90,28 +90,34 @@
 }
 
 .details {
-  position: absolute;
-  box-sizing: border-box;
-  
-  margin: 10px;
-  
-  margin-left: 140px;
-  left: 388px;
-    top: 162px;
+  position: relative;
+    box-sizing: border-box;
+    /* margin: 2px; */
+    /* margin-left: 140px; */
+    left: 355px;
+    /* top: 162px; */
+    width: 428px;
 }
 
 .divDetail {
   box-sizing: border-box;
   margin: auto;
   margin: 1rem;
-  margin-bottom: 193px;
+  
 
 }
 
 .imgDetail {
 
-  top: 40px;
-  left: 22px;
-  width: 25%;
-  position: relative;
+  top: 174px;
+  left: 53px;
+  width: 32%;
+  position: absolute;
+}
+.icon{
+  color: orange;
+    height: 30px;
+}
+.meauto{
+  display: flex;
 }

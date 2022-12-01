@@ -18,14 +18,15 @@ const Home = () => {
 
     }, [])
     console.log(category);
+    
+    
 
     return (
         <div>
-            
 
-            <InputGroup className="mb-3">
+         <InputGroup className="mb-3">
                 <Form.Control
-                    placeholder="Recipient's username"
+                    placeholder="Product name"
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
                     value={inputSearch}

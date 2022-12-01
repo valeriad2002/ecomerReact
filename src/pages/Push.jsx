@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { getPushThunk } from '../assets/store/slice/push.slice';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPushedThunk } from '../assets/store/slice/purchases.slice';
+
 
 const Push = () => {
     const dispatch = useDispatch();
+    const purchase= useSelector(state=>state.purchase);
 
     useEffect(() => {
-        dispatch(getPushThunk());
+        dispatch(getPushedThunk());
     }, []);
     return (
         <div>

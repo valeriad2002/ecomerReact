@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import { createCarThunk } from '../assets/store/slice/card.slice';
 import { getpushThunk } from '../assets/store/slice/push.slice';
 
 const ProductDetails = () => {
@@ -14,13 +16,23 @@ const ProductDetails = () => {
     const productList = useSelector(state => state.products);
     const product = productList.find(productItem => productItem.id === Number(id))
     const relatedPro = productList.filter(productItem => productItem?.category.id === product?.category.id)
+    const [quantity, setQuantity] = useState('');
+    const addToFavorites = () => {
+        const producttoCart = {
+            id: product.id,
+            quantity: quantity
+        };
+        console.log(producttoCart);
+        dispatch(createCarThunk(producttoCart))
+    };
 
 
 
-    console.log(relatedPro);
     return (
         <div>
             <div className='divDetail'>
+
+
 
                 <img className='imgDetail' src={product?.productImgs[0]} alt="" />
                 <br />
@@ -36,6 +48,15 @@ const ProductDetails = () => {
                     Price
                     <br />
                     {product?.price}
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        value={quantity}
+                        onChange={(e) => setQuantity(e.target.value)}
+                    />
+                    <Button onClick={addToFavorites}>Add to card</Button>
+
                 </div>
             </div>
             <h3> Realetes Product</h3>
